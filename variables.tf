@@ -1,10 +1,14 @@
 variable "ec2_instances" {
-    type = list(string)
-    default  = [
-        "worker1",
-        "worker2",
-        "master1",
-        "master2"
-    ]
+  type = list(map)
+  default = [
+    { name = "worker1",
+    ip = "10.0.1.20" },
+    { name = "worker2",
+    ip = "10.0.1.21" },
+    { name = "master1",
+    ip = "10.0.1.10" },
+    { name = "master2",
+    ip = "10.0.1.11" }
+  ]
 
 }
